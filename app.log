@@ -8,3 +8,9 @@
   ➜  Local:   http://localhost:5176/
   ➜  Network: http://172.16.11.236:5176/
   ➜  Network: http://192.168.64.1:5176/
+13:36:04 [vite] hmr update /src/index.css, /src/components/ControlPanel.tsx, /src/components/SealCanvas.tsx
+13:36:32 [vite] hmr update /src/index.css, /src/components/ControlPanel.tsx, /src/components/SealCanvas.tsx
+13:37:10 [vite] hmr update /src/components/ControlPanel.tsx, /src/index.css
+13:37:20 [vite] hmr update /src/components/SealCanvas.tsx, /src/index.css
+13:37:35 [vite] hmr update /src/App.tsx, /src/index.css
+13:37:43 [vite] hmr update /src/components/SealCanvas.tsx, /src/index.css

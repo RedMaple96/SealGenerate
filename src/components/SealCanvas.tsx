@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useCallback } from 'react'
+import { useEffect, useRef, useCallback } from 'react'
 import { useSealStore, SealConfig } from '../store/useSealStore'
 
 const SCALE = 10 // 1mm = 10px 用于高清渲染
@@ -175,6 +175,8 @@ export default function SealCanvas() {
           ctx.translate(x, y)
           // 文字方向朝向圆心
           ctx.rotate(currentAngle - Math.PI / 2)
+          // 统一调整底部防伪码纵向压缩比，根据规范使数字略瘦
+          ctx.scale(0.8, 1)
           ctx.fillText(text[i], 0, 0)
           ctx.restore()
         }

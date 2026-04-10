@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 
-export type SealType = 'public' | 'contract' | 'finance' | 'invoice'
+export type SealType = 'public_45' | 'public_42' | 'public_40' | 'contract_42' | 'contract_40' | 'finance_30' | 'invoice'
 export type ShapeType = 'circle' | 'ellipse'
 
 export interface SealConfig {
@@ -40,8 +40,29 @@ interface SealState {
 }
 
 const defaultTemplates: Record<SealType, SealConfig> = {
-  public: {
-    type: 'public',
+  public_45: {
+    type: 'public_45',
+    shape: 'circle',
+    width: 45,
+    height: 45,
+    borderWidth: 1.5,
+    color: '#e60000',
+    mainText: '北京市测试科技有限公司',
+    mainTextSize: 6.5,
+    mainTextMargin: 1,
+    mainTextAngle: 270,
+    hasStar: true,
+    starSize: 16,
+    starOffsetY: 0.5,
+    subText: '',
+    subTextSize: 6.5,
+    subTextOffsetY: 6,
+    codeText: '1101010000001',
+    codeTextSize: 1.2,
+    codeTextMargin: 1,
+  },
+  public_42: {
+    type: 'public_42',
     shape: 'circle',
     width: 42,
     height: 42,
@@ -53,16 +74,58 @@ const defaultTemplates: Record<SealType, SealConfig> = {
     mainTextAngle: 270,
     hasStar: true,
     starSize: 14,
-    starOffsetY: 1.5,
+    starOffsetY: 0.5,
     subText: '',
     subTextSize: 6.5,
     subTextOffsetY: 6,
-    codeText: '1101010000001',
+    codeText: '1101010000002',
     codeTextSize: 1.2,
     codeTextMargin: 1,
   },
-  contract: {
-    type: 'contract',
+  public_40: {
+    type: 'public_40',
+    shape: 'circle',
+    width: 40,
+    height: 40,
+    borderWidth: 1.1,
+    color: '#e60000',
+    mainText: '北京市测试科技有限公司',
+    mainTextSize: 6.5,
+    mainTextMargin: 1,
+    mainTextAngle: 270,
+    hasStar: true,
+    starSize: 13,
+    starOffsetY: 0.5,
+    subText: '',
+    subTextSize: 6.5,
+    subTextOffsetY: 6,
+    codeText: '1101010000003',
+    codeTextSize: 1.2,
+    codeTextMargin: 1,
+  },
+  contract_42: {
+    type: 'contract_42',
+    shape: 'circle',
+    width: 42,
+    height: 42,
+    borderWidth: 1.2,
+    color: '#e60000',
+    mainText: '北京市测试科技有限公司',
+    mainTextSize: 6.5,
+    mainTextMargin: 1,
+    mainTextAngle: 210,
+    hasStar: true,
+    starSize: 14,
+    starOffsetY: 1.5,
+    subText: '合同专用章',
+    subTextSize: 6.5,
+    subTextOffsetY: 7,
+    codeText: '1101010000004',
+    codeTextSize: 1.2,
+    codeTextMargin: 1,
+  },
+  contract_40: {
+    type: 'contract_40',
     shape: 'circle',
     width: 40,
     height: 40,
@@ -78,12 +141,12 @@ const defaultTemplates: Record<SealType, SealConfig> = {
     subText: '合同专用章',
     subTextSize: 6.5,
     subTextOffsetY: 7,
-    codeText: '1101010000002',
+    codeText: '1101010000005',
     codeTextSize: 1.2,
     codeTextMargin: 1,
   },
-  finance: {
-    type: 'finance',
+  finance_30: {
+    type: 'finance_30',
     shape: 'circle',
     width: 30,
     height: 30,
@@ -99,7 +162,7 @@ const defaultTemplates: Record<SealType, SealConfig> = {
     subText: '财务专用章',
     subTextSize: 4.5,
     subTextOffsetY: 5,
-    codeText: '1101010000003',
+    codeText: '1101010000006',
     codeTextSize: 1.2,
     codeTextMargin: 1,
   },
@@ -127,7 +190,7 @@ const defaultTemplates: Record<SealType, SealConfig> = {
 }
 
 export const useSealStore = create<SealState>((set) => ({
-  config: { ...defaultTemplates.public },
+  config: { ...defaultTemplates.public_40 },
   updateConfig: (updates) =>
     set((state) => ({ config: { ...state.config, ...updates } })),
   applyTemplate: (type) =>
