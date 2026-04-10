@@ -1,0 +1,10 @@
+
+> seal-generate@0.0.0 dev
+> vite
+
+
+  VITE v5.4.21  ready in 540 ms
+
+  ➜  Local:   http://localhost:5176/
+  ➜  Network: http://172.16.11.236:5176/
+  ➜  Network: http://192.168.64.1:5176/
